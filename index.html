@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xdevman1 Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="profile-pic">
+                <img src="cr7.png" alt="Goat's pfp fr">
+            </div>
+            <div class="name">xdevman1</div>
+            <div class="role">Web Developer</div>
+            <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> xdevman1@gmail.com</div>
+                <div class="contact-item"><i class="fab fa-discord"></i> <a class="contact-link" href="https://discord.com/users/1074222869162250281">xdevman9</a></div>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <div onclick="showSection('about')"><i class="fas fa-user"></i> About</div>
+                <div onclick="showSection('skills')"><i class="fas fa-code"></i> Skills</div>
+                <div onclick="showSection('projects')"><i class="fas fa-folder-open"></i> Projects</div>
+                <div onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</div>
+            </div>
+
+            <div id="about" class="section active">
+                <h2>About Me</h2>
+                <p>I'm a 15-year-old passionate about coding and exploring new technologies, always eager to collaborate and build something extraordinary on the path to achieving my big dreams.</p>
+                <p>I specialize in building responsive web apps, bots, and creative digital solutions. My mission is to deliver high-quality work while keeping things simple and efficient.</p>
+            </div>
+
+            <div id="skills" class="section">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <div><i class="fab fa-html5"></i> HTML</div>
+                    <div><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div><i class="fab fa-js"></i> JavaScript</div>
+                    <div><i class="fab fa-python"></i> Python</div>
+                    <div><i class="fas fa-code"></i> Lua</div>
+                    <div><i class="fas fa-wind"></i> Tailwind</div>
+                    <div><i class="fab fa-github"></i> GitHub</div>
+                    <div><i class="fas fa-code"></i> VSCode</div>
+                    <div><i class="fas fa-server"></i> Vercel</div>
+                    <div><i class="fas fa-robot"></i> Discord Bot Dev</div>
+                    <div><i class="fab fa-docker"></i> Docker</div>
+                </div>
+                <h2 style="margin-top:30px;">Currently Learning</h2>
+                <div class="learning-list">
+                    <div><i class="fab fa-node-js"></i> Node.js</div>
+                    <div><i class="fas fa-code"></i> TypeScript</div>
+                    <div><i class="fab fa-java"></i> Java</div>
+                    <div><i class="fas fa-brain"></i> Machine Learning</div>
+                </div>
+            </div>
+
+            <div id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>This is my personal portfolio website showcasing my skills, projects, and contact info. Built with HTML, CSS, and JavaScript!</p>
+                    <div class="project-buttons">
+                        <a href="https://xdevman1.github.io/Portfolio/" target="_blank"><i class="fas fa-globe"></i> View Site</a>
+                        <a href="https://github.com/xdevman1/Portfolio" target="_blank"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact-item"><i class="fas fa-envelope"></i> xdevman1@gmail.com</div>
+                <div class="contact-item"><i class="fab fa-discord"></i> <a class="contact-link" href="https://discord.com/users/1074222869162250281">xdevman9</a></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
