@@ -366,4 +366,3 @@ window.addEventListener('scroll', throttle(() => {
     highlightNavLink();
 }, 100));
 
-console.log('🚀 Portfolio website loaded successfully!');
