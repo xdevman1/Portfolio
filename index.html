@@ -6,7 +6,290 @@
     <title>Devman - Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="cr7.png">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+  --bg-color: #1a1a1a;
+  --card-color: #2a2a2a;
+  --text-color: #f0f0f0;
+  --subtle-text-color: #a0a0a0;
+  --accent-color: #3498db;
+  --border-color: #444;
+  --button-bg-color: #555;
+  --button-hover-bg-color: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+header {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header h1 span {
+  color: var(--accent-color);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--subtle-text-color);
+}
+
+.section-card {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: scale(1.05);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.fa-html5 {
+  color: #e34c26;
+}
+.fa-css3-alt {
+  color: #264de4;
+}
+.fa-js-square {
+  color: #f0db4f;
+}
+.fa-python {
+  color: #306998;
+}
+.fa-git-alt {
+  color: #f34f29;
+}
+.fa-docker {
+  color: #0db7ed;
+}
+
+.project-item {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.project-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-link-btn {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.project-link-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-bg-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--card-color);
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  width: 90%;
+  max-width: 450px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close-button {
+  color: var(--subtle-text-color);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent-color);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-info i {
+  color: var(--accent-color);
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+    </style>
 </head>
 <body>
 
