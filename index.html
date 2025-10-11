@@ -4,318 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devman - Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="cr7.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>xdevman</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+
+    <div class="container">
+        <nav>
+            <div class="logo">Devman</div>
+            <ul>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
-    
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hello.<br>
-                        I'm <span class="highlight">Devman</span><br>
-                        <span class="role">Web Developer</span>
-                    </h1>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-circle">
-                        <img src="cr7.png" alt="xdevman" class="profile-img">
-                        <div class="circle-decoration"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="tech-stack">
-                <div class="tech-item">HTML</div>
-                <div class="tech-item">CSS</div>
-                <div class="tech-item">JavaScript</div>
-                <div class="tech-item">Python</div>
-                <div class="tech-item">Tailwind</div>
-                <div class="tech-item">GitHub</div>
-            </div>
-        </div>
-    </section>
+        <main>
+            <header>
+                <h1>Hi, I'm <span>Devman</span></h1>
+                <p>A 16 boy who loves coding.</p>
+            </header>
 
-    
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About me</h2>
-                    <p class="about-description">
-                        I'm a 16-year-old passionate about coding and exploring new technologies, always eager to collaborate and build something extraordinary on the path to achieving my big dreams.
-                    </p>
-                    <p class="about-description">
-                        I specialize in building responsive web apps, bots, and creative digital solutions. My mission is to deliver high quality work while keeping things simple and efficient.
-                    </p>
-                </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Completed<br>Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Years of<br>experience</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="services">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Web Development</h3>
-                        <p>Building responsive and modern web applications</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Bot Development</h3>
-                        <p>Creating Discord bots and automation solutions</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Responsive Design</h3>
-                        <p>Ensuring great user experience across all devices</p>
-                    </div>
-                </div>
-            </div>
+            <section id="about" class="section-card">
+                <h2>About Me</h2>
+                <p>Why you want to know about me?</p>
+            </section>
 
-            <div class="skills-section">
-                <h3 class="skills-title">Skills & Technologies</h3>
+            <section id="skills" class="section-card">
+                <h2>My Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Current Skills</h4>
-                        <div class="skill-tags">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Lua (Still learning)</span>
-                            <span class="skill-tag">Tailwind</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">VSCode</span>
-                            <span class="skill-tag">Vercel</span>
-                            <span class="skill-tag">Discord Bot Dev</span>
-                            <span class="skill-tag">Docker</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Currently Learning</h4>
-                        <div class="skill-tags">
-                            <span class="skill-tag learning">Node.js</span>
-                            <span class="skill-tag learning">TypeScript</span>
-                            <span class="skill-tag learning">Java</span>
-                            <span class="skill-tag learning">Machine Learning</span>
-                        </div>
-                    </div>
+                    <div class="skill-item"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
+                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
+                    <div class="skill-item"><i class="fa-brands fa-js-square"></i><p>JavaScript</p></div>
+                    <div class="skill-item"><i class="fa-brands fa-python"></i><p>Python</p></div>
                 </div>
-            </div>
+            </section>
+
+            <section id="projects" class="section-card">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>Gonna add em later!</h3>
+                </div>
+                </div>
+                 </section>
+
+            <section id="contact" class="section-card">
+                <h2>Get In Touch</h2>
+                <p>I am always open dm me or email me.</p>
+                <button id="openContactModal" class="btn"><i class="fa-solid fa-address-book"></i> Show Contact Info</button>
+            </section>
+        </main>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img src="https://avatars.githubusercontent.com/xdevman1" alt="Pfp">
+            <h3>Contact Information</h3>
+            <ul class="contact-info">
+                <li><i class="fa-solid fa-envelope"></i> xdevman1@gmail.com</li>
+                <li><i class="fa-brands fa-discord"></i> xdevman9</li>
+                <li><i class="fa-brands fa-github"></i> xdevman</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-   
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/portfolio.png" alt="Portfolio Website">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Personal Portfolio</h3>
-                        <p class="project-description">
-                            My personal portfolio website showcasing my skills, projects, and contact info. Built with HTML, CSS!
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://xdevman1.github.io/Portfolio/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/xdevman1/Portfolio" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <script>
+        
+        const modal = document.getElementById('contactModal');
+        const openBtn = document.getElementById('openContactModal');
+        const closeBtn = document.querySelector('.close-button');
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/pass-gen.png" alt="Password Generator">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Password Generator</h3>
-                        <p class="project-description">
-                            A simple password generator to enhance your security with social media or others.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://pass-gen.ddns.net/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/xdevman1/Password-Generator" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/sparkchat.png" alt="Spark Chat">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Spark Chat</h3>
-                        <p class="project-description">
-                            A simple chat site to connect with people and chat i guess, its still in beta so things might not work properly.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Socket.io</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://spark-chat-cxwh.onrender.com/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <a href="mailto:xdevman1@gmail.com">xdevman1@gmail.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-discord"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Discord</h4>
-                                <a href="https://discord.com/users/1074222869162250281" target="_blank">xdevman9</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/xdevman1" target="_blank">@xdevman1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://github.com/xdevman1" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://discord.com/users/1074222869162250281" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a href="mailto:xdevman1@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        openBtn.onclick = () => { modal.style.display = "block"; }
+        closeBtn.onclick = () => { modal.style.display = "none"; }
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
